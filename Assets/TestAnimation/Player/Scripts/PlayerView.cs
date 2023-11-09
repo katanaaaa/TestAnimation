@@ -1,18 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-public class PlayerView : MonoBehaviour
+namespace PetProject.Player
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerView : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public class Factory : PlaceholderFactory<PlayerView>
+        { }
     }
 }

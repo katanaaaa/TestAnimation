@@ -1,26 +1,18 @@
-using UnityEngine;
 using Zenject;
 
-public class ApplicationInstaller : MonoInstaller
+namespace PetProject.Installers
 {
-    public override void InstallBindings()
+    public class ApplicationInstaller : MonoInstaller
     {
-        Container
-            .Bind<Light>()
-            .FromComponentInNewPrefabResource("Directional Light")
-            .AsSingle()
-            .NonLazy();
+        public override void InstallBindings()
+        {
+            PlayerInstaller.Install(Container);
+            MiscInstaller.Install(Container);
 
-        Container
-            .Bind<Camera>()
-            .FromComponentInNewPrefabResource("Main Camera")
-            .AsSingle()
-            .NonLazy();
-
-        Container
-            .Bind<PlayerView>()
-            .FromComponentInNewPrefabResource("Player")
-            .AsSingle()
-            .NonLazy();
+            Container
+                .Bind<GameController>()
+                .AsSingle()
+                .NonLazy();
+        }
     }
 }
