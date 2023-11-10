@@ -6,7 +6,6 @@ namespace PetProject.Player
     public class PlayerMovement : ITickable
     {
         private PlayerView _playerView;
-        private Animator _playerAnimator;
         private TickableManager _tickableManager;
         private PlayerAnimation _playerAnimation;
         private float _speed = 3f;
@@ -22,9 +21,9 @@ namespace PetProject.Player
         public void Init(PlayerView playerView)
         {
             _playerView = playerView;
-            _playerAnimator = _playerView.GetComponentInChildren<Animator>();
+            var playerAnimator = _playerView.GetComponentInChildren<Animator>();
             _tickableManager.Add(this);
-            //_playerAnimation.Init(_playerAnimator);
+            _playerAnimation.Init(playerAnimator);
         }
 
         public void StopTick()
@@ -38,29 +37,9 @@ namespace PetProject.Player
             var x = Input.GetAxis("Horizontal");
             var target = new Vector3(x, 0, z) * _speed * Time.deltaTime;
 
-            if (z != 0 || x != 0)
-            {
-                if (Input.GetKey(KeyCode.LeftShift))
-                {
-                    _playerAnimator.SetBool("Idle", false);
-                    _playerAnimator.SetBool("Walking", false);
-                    _playerAnimator.SetBool("Running", true);
-                    _playerView.transform.Translate(target);
-                }
-                else
-                {
-                    _playerAnimator.SetBool("Idle", false);
-                    _playerAnimator.SetBool("Running", false);
-                    _playerAnimator.SetBool("Walking", true);
-                    _playerView.transform.Translate(target);
-                }
-            }
-            else
-            {
-                _playerAnimator.SetBool("Walking", false);
-                _playerAnimator.SetBool("Running", false);
-                _playerAnimator.SetBool("Idle", true);
-            }
+            _playerAnimation.Move("Horizontal", z);
+            _playerAnimation.Move("Vertical", x);
+            _playerView.transform.Translate(target);
         }
     }
 }

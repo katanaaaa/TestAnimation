@@ -111,6 +111,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3321919801592875672, guid: 1c8d54a72ad22b540a773e2162caeb9a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3321919801592875672, guid: 1c8d54a72ad22b540a773e2162caeb9a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.061884765
+      objectReference: {fileID: 0}
+    - target: {fileID: -3321919801592875672, guid: 1c8d54a72ad22b540a773e2162caeb9a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0232162
+      objectReference: {fileID: 0}
+    - target: {fileID: -3321919801592875672, guid: 1c8d54a72ad22b540a773e2162caeb9a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98263067
+      objectReference: {fileID: 0}
+    - target: {fileID: -3321919801592875672, guid: 1c8d54a72ad22b540a773e2162caeb9a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.054468974
+      objectReference: {fileID: 0}
+    - target: {fileID: -3321919801592875672, guid: 1c8d54a72ad22b540a773e2162caeb9a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.17692325
+      objectReference: {fileID: 0}
+    - target: {fileID: -3321919801592875672, guid: 1c8d54a72ad22b540a773e2162caeb9a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.012970561
+      objectReference: {fileID: 0}
+    - target: {fileID: -3321919801592875672, guid: 1c8d54a72ad22b540a773e2162caeb9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1c8d54a72ad22b540a773e2162caeb9a, type: 3}
       propertyPath: m_Name
       value: Alien
@@ -119,6 +151,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 8ac70fcd33a7efc4fa73d49717333c69, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 1c8d54a72ad22b540a773e2162caeb9a, type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 1c8d54a72ad22b540a773e2162caeb9a, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c8d54a72ad22b540a773e2162caeb9a, type: 3}
 --- !u!4 &5782253230945398272 stripped
